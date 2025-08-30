@@ -16,8 +16,29 @@ if (process.version.startsWith('v17') || process.version.startsWith('v18') || pr
 
 const app = express();
 
-// Middleware
-app.use(cors({ origin: '*'}));
+// CORS configuration with specific origins
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://healthcareproject-frontend.vercel.app',
+    'https://healthcareproject2.onrender.com',
+    'https://healthcareproject-39oy.onrender.com'
+];
+
+app.use(cors({ 
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            console.log(`[cors] Blocked request from origin: ${origin}`);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
+}));
 app.use(express.json());
 
 // Config
@@ -167,7 +188,7 @@ async function appendToSheet(data) {
 function buildUserEmailHtml(payload) {
     const officeEmail = process.env.OFFICE_EMAIL || 'info@bhargavihealthcare.com';
     const officePhone = process.env.OFFICE_PHONE || '+91 98765 43210';
-    const officeAddress = process.env.OFFICE_ADDRESS || '123 Health Street, Medical District, Chennai - 600001';
+    const officeAddress = process.env.OFFICE_ADDRESS || '123 Health Street, Medical District, Andhrapradesh - 600001';
     return `
       <div style="font-family: Arial, sans-serif; color: #111;">
         <h2 style="color:#007D8C;">Thank you for contacting Bhargavi Health Care</h2>
