@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+wimport { getBackendUrl } from '@/lib/env';
 
 export const dynamic = 'force-dynamic';
 
@@ -6,11 +7,10 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     
-    // Real backend call
-    const backendUrl =
-      process.env.BACKEND_URL ||
-      process.env.NEXT_PUBLIC_BACKEND_URL ||
-      'http://localhost:4000';
+    // Use the environment utility to get the correct backend URL
+    const backendUrl = getBackendUrl();
+    console.log(`[API] Using backend URL: ${backendUrl}`);
+    
     const res = await fetch(`${backendUrl}/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
