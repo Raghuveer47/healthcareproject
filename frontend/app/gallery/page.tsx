@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error - dynamic import type resolves at runtime
+
 const GalleryClient = dynamic(() => import('./GalleryClient'), { ssr: false });
 
 export const metadata: Metadata = {
