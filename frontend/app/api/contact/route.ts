@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getBackendUrl } from '@/lib/env';
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     
-    // Use the environment utility to get the correct backend URL
-    const backendUrl = getBackendUrl();
+    // Get backend URL directly from environment variables
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 
+                      process.env.BACKEND_URL || 
+                      'https://healthcareproject-39oy.onrender.com';
+    
     console.log(`[API] Using backend URL: ${backendUrl}`);
     
     const res = await fetch(`${backendUrl}/contact`, {
