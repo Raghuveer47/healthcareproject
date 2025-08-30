@@ -84,7 +84,7 @@ export default function About() {
               <div className="flex justify-center lg:justify-start">
                 <Image 
                   src="https://res.cloudinary.com/dy9zlgjh6/image/upload/v1756286989/BHARGVI-HEALTH-CARE-LOGO-14_ivaxuv.png"
-                  alt="BHARGVI HEALTH CARE Logo"
+                  alt="BHARGAVI HEALTH CARE Logo"
                   width={100}
                   height={100}
                   className="w-24 h-24 lg:w-28 lg:h-28 object-contain"

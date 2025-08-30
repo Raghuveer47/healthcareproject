@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: 'https://res.cloudinary.com/dy9zlgjh6/image/upload/v1756286989/BHARGVI-HEALTH-CARE-LOGO-14_ivaxuv.png',
         width: 1200,
         height: 630,
-        alt: 'BHARGVI HEALTH CARE Logo',
+        alt: 'BHARGAVI HEALTH CARE Logo',
       },
     ],
   },

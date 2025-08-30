@@ -82,7 +82,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Image 
                 src="https://res.cloudinary.com/dy9zlgjh6/image/upload/v1756286989/BHARGVI-HEALTH-CARE-LOGO-14_ivaxuv.png"
-                alt="BHARGVI HEALTH CARE Logo"
+                alt="BHARGAVI HEALTH CARE Logo"
                 width={80}
                 height={80}
                 className="w-20 h-20 object-contain"
@@ -279,7 +279,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Image 
                 src="https://res.cloudinary.com/dy9zlgjh6/image/upload/v1756286989/BHARGVI-HEALTH-CARE-LOGO-14_ivaxuv.png"
-                alt="BHARGVI HEALTH CARE Logo"
+                alt="BHARGAVI HEALTH CARE Logo"
                 width={80}
                 height={80}
                 className="w-20 h-20 object-contain"

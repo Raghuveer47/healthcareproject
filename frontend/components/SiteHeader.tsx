@@ -71,7 +71,7 @@ export function SiteHeader() {
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
             />
             <span className="font-poppins font-bold text-lg sm:text-xl text-brand-teal hidden sm:inline">
-              BHARGVI HEALTH CARE
+              BHARGAVI HEALTH CARE
             </span>
           </Link>
 

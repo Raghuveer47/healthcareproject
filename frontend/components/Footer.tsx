@@ -41,7 +41,7 @@ export function Footer() {
                 height={40}
                 className="w-10 h-10 object-contain"
               />
-              <span className="font-poppins font-bold text-xl">BHARGVI</span>
+              <span className="font-poppins font-bold text-xl">BHARGAVI</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Compassionate care, closer to your community. We deliver early detection and diagnostic services through modern, mobile, and clinic-based setups.
