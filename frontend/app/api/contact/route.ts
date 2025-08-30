@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-wimport { getBackendUrl } from '@/lib/env';
-
-export const dynamic = 'force-dynamic';
+import { getBackendUrl } from '@/lib/env';
 
 export async function POST(req: NextRequest) {
   try {
